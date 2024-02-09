@@ -230,7 +230,7 @@ int commit_staged_file(int commit_ID, char* filepath) {
 int track_file(char *filepath) {
     if (is_tracked(filepath)) return 0;
 
-    FILE *file = fopen(".neogit/tracks", "a");
+    FILE *file = fopen(".gitmn/tracks", "a");
     if (file == NULL) return 1;
     fprintf(file, "%s\n", filepath);
     return 0;
